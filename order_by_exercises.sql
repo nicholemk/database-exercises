@@ -4,7 +4,7 @@ USE employees;
 SELECT *
 FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
-order by last_name asc, first_name;
+order by first_name asc;
 
 SELECT *
 FROM employees
@@ -20,7 +20,7 @@ WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
 SELECT *
 FROM employees
 WHERE last_name LIKE 'E%'
-order by emp_no;
+order by emp_no desc;
 
 # Find all employees hired in the 90s
 SELECT *
@@ -59,7 +59,7 @@ WHERE last_name LIKE 'E%' AND last_name LIKE '%E';
 SELECT *
 FROM employees
 WHERE hire_date LIKE '199%' AND birth_date LIKE '%-12-25'
-order by hire_date asc, birth_date;
+order by birth_date asc,hire_date desc;
 
 # Find all employees with a 'q' in their last name but not 'qu'
 SELECT *
