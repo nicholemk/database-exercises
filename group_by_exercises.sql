@@ -4,9 +4,14 @@ select distinct title
 from titles;
 
 
-SELECT first_name, last_name
+SELECT last_name
 from employees
-where last_name = 'e%' or last_name = 'e%'
+where last_name like 'e%' and last_name like 'e%'
+group by last_name;
+
+select first_name, last_name
+from employees
+where last_name like 'e%' and last_name like '%e'
 group by first_name, last_name;
 
 SELECT distinct last_name
